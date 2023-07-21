@@ -197,7 +197,7 @@
 
             <div class="form-group">
                 <label for="message">Message:</label>
-                <textarea name="message" id="message" required>{{ old('message') }}</textarea>
+                <textarea name="message" id="message" required></textarea>
                 <input type="hidden" name="device" value="{{ env('WA_API_KEY') }}">
                 <input type="hidden" name="api" value="{{ env('WA_AUTH_KEY') }}">
             </div>
