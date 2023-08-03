@@ -46,7 +46,7 @@ class LaguController extends Controller
             'genre' => ['required', 'max:255', 'string'],
             'album' => ['required', 'max:255', 'string'],
             'audio' => ['required', 'mimes:mp3,flac,wav,webm'],
-            'cover' => ['required', 'mimes:png,jpg,jpeg'],
+            'cover' => ['required', 'mimes:PNG,png,jpg,jpeg'],
         ]);
 
         $validate['audio'] == $request->file('audio') ? $validate['audio'] = $request->file('audio')->store('audios') : null;

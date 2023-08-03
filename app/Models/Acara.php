@@ -21,7 +21,7 @@ class Acara extends Model
 
     protected $fillable = ['nama','slug','jenis','penyiar','siaran_id','hari','jam'];
 
-    /**
+    /** 
      * Get the route key for the model.
      *
      * @return string

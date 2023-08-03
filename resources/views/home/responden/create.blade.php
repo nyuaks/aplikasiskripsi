@@ -61,34 +61,34 @@
                     </select>
                 </div>
             </div>
-
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="lagu_id">Request Lagu</label>
+                    <select name="lagu_id" id="lagu_id" class="form-select form-select-lg">
+                        @foreach($lagus as $lagu)
+                        @if(old('lagu_id') == $lagu->id)
+                        <option value="{{ $lagu->id }}" selected>{{ $lagu->title }}</option>
+                        @else
+                        <option value="{{ $lagu->id }}">{{ $lagu->title }}</option>
+                        @endif
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
             <div class="col-md-6">
                 <label for="respon_pendengar" class="input-group">Respon Pendengar</label>
                 <textarea name="respon_pendengar" id="respon_pendengar" cols="50" rows="" class="input-group-text form-control @error('respon_pendengar')
                 is_invalid
-            @enderror"></textarea>
+                @enderror"></textarea>
                 @error('respon_pendengar')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
                 </span>
                 @enderror
             </div>
-        </div>
-
-        <div class="row content">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="lagu">Request Lagu</label>
-                            <input type="text" class="form-control @error('lagu')
-                            is-invalid
-                        @enderror" id="lagu" placeholder="Example: Luna" required autofocus value="{{ old('lagu') }}" name="lagu">
-                            @error('lagu')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
-                        </div>
-                    </div>
         </div>
 
         <div class="d-flex justify-content-center align-items-center">

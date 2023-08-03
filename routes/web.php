@@ -72,6 +72,7 @@ Route::middleware(['auth'])->group(function () {
 
     // Lagu
     Route::resource('/lagu', LaguController::class);
+    
 
     // Request Lagu
     Route::resource('/request-lagu', RequestLaguController::class)->except('show');

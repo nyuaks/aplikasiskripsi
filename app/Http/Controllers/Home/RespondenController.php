@@ -6,6 +6,7 @@ use App\Models\Responden;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Acara;
+use App\Models\Lagu;
 
 class RespondenController extends Controller
 {
@@ -27,7 +28,8 @@ class RespondenController extends Controller
     public function create()
     {
         return view('home.responden.create',[
-            'acaras' => Acara::get()
+            'acaras' => Acara::get(),
+            'lagus' => Lagu::get()
         ]);
     }
 
@@ -44,7 +46,7 @@ class RespondenController extends Controller
             'respon_pendengar' => ['required','string'],
             'telepon' => ['required','string'],
             'pendengar' => ['required','string'],
-            'lagu' => ['required','string']
+            'lagu_id' => ['required','string']
         ]);
 
         Responden::create($validate);

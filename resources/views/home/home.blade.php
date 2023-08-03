@@ -44,7 +44,7 @@
                             <td>{!! \Carbon\Carbon::parse($acara->hari)->format('D') !!}</td>
                             <td>{!! \Carbon\Carbon::parse($acara->jam)->format('H:i') !!}</td>
                         </tr>
-                        @endforeach
+                        @endforeach 
                     </tbody>
                 </table>
                 {{ $acaras->links() }}

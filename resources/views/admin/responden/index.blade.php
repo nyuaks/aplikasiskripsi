@@ -50,8 +50,7 @@
             <td>{!! $responden->pendengar !!}</td>
             <td>{!! $responden->telepon !!}</td>
             <td>{!! $responden->respon_pendengar !!}</td>
-            <td>{!! $responden->lagu !!}</td>
-            <td><p class="starability-result" data-rating="{!! $responden->rating !!}"></p></td>
+            <td>{!! $responden->lagu->title !!}</td>
             <td>
             {{-- <a href="{{ route('wa.send',$responden->id) }}"><button onclick="openLink()" type="button" class="btn btn-info">Kirim Info</button></a> --}}
               <form action="{{ route('responden.destroy', $responden->id) }}" method="post" class="d-inline-block">

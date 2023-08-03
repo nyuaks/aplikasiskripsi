@@ -90,6 +90,16 @@
               @enderror
             </div>
           </div>
+          <div class="row">
+          <div class="col-md-6">
+            <label for="audio" class="form-label">Audio</label>
+            <input class="form-control form-control-file form-control-lg" type="file" id="audio" name="audio">
+            @error('audio')
+            <span class="invalid-feedback" role="alert">
+              <strong>{{ $message }}</strong>
+            </span>
+            @enderror
+          </div>
         </div>
         <div class="d-flex justify-content-center align-items-center">
           <button type="submit" class="btn btn-primary mt-3">Submit</button>
